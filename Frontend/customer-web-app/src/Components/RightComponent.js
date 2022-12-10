@@ -1,4 +1,5 @@
 import React from 'react'
+import UpdateUser from './UpdateUser'
 
 const RightComponent = () => {
   return (
@@ -8,7 +9,31 @@ const RightComponent = () => {
      <div style={{marginLeft:"40px"}}>
      ⚪ UserName   ✉ EmailId 📞MobileNumber
      <br/>
-     <button style={{marginLeft:"60px"}}>🖊Edit</button><button style={{marginLeft:"60px"}}>🗑DeleteCustomer</button>
+     
+
+
+     <button type="button" className="btn btn-primary" style={{marginLeft:"40px"}} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+     🖊Edit
+</button>
+
+
+<div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div className="modal-dialog">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h1 className="modal-title fs-5" id="staticBackdropLabel">Updating User Details</h1>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div className="modal-body">
+       <UpdateUser/>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<button type="button" className="btn btn-primary" style={{marginLeft:"40px"}} data-bs-toggle="modal" >
+🗑DeleteCustomer
+</button>
     <hr style={{marginRight:"40px"}}/>
     </div>
    </div>
@@ -32,11 +57,11 @@ const RightComponent = () => {
   
 </div>
 <h4 style={{marginLeft:"40px",marginTop:"20px"}}>Address</h4>
-<ul class="list-group">
-<li class="list-group-item list-group-item-light">Country</li>
-<li class="list-group-item list-group-item-danger">State</li>
-<li class="list-group-item list-group-item-light">City</li>
-<li class="list-group-item list-group-item-danger">ZipCode</li>
+<ul className="list-group">
+<li className="list-group-item list-group-item-light">Country</li>
+<li className="list-group-item list-group-item-danger">State</li>
+<li className="list-group-item list-group-item-light">City</li>
+<li className="list-group-item list-group-item-danger">ZipCode</li>
 
  
 </ul>
